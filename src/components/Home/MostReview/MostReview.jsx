@@ -13,7 +13,7 @@ const MostReview = () => {
             <p>These phones are celebrated for their innovation, performance, and user satisfaction, making them popular choices in the market.</p>
             </div>
 
-            <div className='flex bg-gray-200 p-8 flex-wrap gap-5 justify-center mb-2'>
+            <div className='flex bg-gray-200 p-8 flex-wrap gap-5 justify-center mb-2' >
 
                 {
                     sortArray.slice(0,6).map((phone)=><MostReviewCard key={phone.id} phone={phone}></MostReviewCard>)

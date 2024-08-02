@@ -14,7 +14,10 @@ const Team = () => {
 
             {
                 team.map((e,id)=>
-                    <div key={id} className="card bg-base-100 shadow-xl">
+                    <div key={id} className="card bg-base-100 shadow-xl"
+                        data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
                         <figure><img className="w-[200px] object-cover h-[200px]" src={e.photo} /></figure>
                             <div className="text-center">
                             <h2 className="font-bold mt-3 text-orange-800 text-xl">

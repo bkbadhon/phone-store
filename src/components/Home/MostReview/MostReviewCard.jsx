@@ -3,7 +3,7 @@ const MostReviewCard = ({phone}) => {
     const {id , name, brand, price, info, rating, photo} = phone;
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl" data-aos="flip-left">
         <figure><img className="w-[200px] h-[200px]" src={photo} /></figure>
         <div className="card-body">
           <h2 className="card-title">

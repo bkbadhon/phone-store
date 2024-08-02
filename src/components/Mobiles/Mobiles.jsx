@@ -45,7 +45,10 @@ const Mobiles = () => {
             {
 
                 array.map((phone,id)=>(
-                    <div key={id} className="card w-96 bg-base-100 shadow-xl">
+                    <div key={id} className="card w-96 bg-base-100 shadow-xl" 
+                        data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                     <figure><img className="w-[200px] h-[200px]" src={phone.photo} /></figure>
                         <div className="card-body">
                         <h2 className="card-title">
