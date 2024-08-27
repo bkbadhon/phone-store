@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const AxiosSource = axios.create({
-    baseURL :'http://localhost:3000/',
+    baseURL :'https://phone-store-server-badhons-projects.vercel.app',
     withCredentials:true
 })
 const useAxios = () => {

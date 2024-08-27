@@ -8,7 +8,7 @@ const Mobiles = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/phones")
+    fetch("https://phone-store-server-badhons-projects.vercel.app/phones")
       .then((res) => res.json())
       .then((data) => {
         setPhones(data);
