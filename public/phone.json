@@ -1,0 +1,202 @@
+[
+    {
+        "id": "1",
+        "photo": "https://i.ibb.co/LYb1Zft/images.jpg",
+        "brand": "Apple",
+        "name": "iPhone 14 Pro",
+        "processor": "A16 Bionic",
+        "price":1200,
+        "info": "Latest iPhone model with advanced camera and display technology.",
+        "rating": 5
+    },
+    {
+        "id": "2",
+        "photo": "https://i.ibb.co/1G7brYc/iphone15.jpg",
+        "brand": "Apple",
+        "name": "iPhone 13",
+        "price":1100,
+        "processor": "A15 Bionic",
+        "info": "Previous generation iPhone with great performance and camera.",
+        "rating": 5
+    },
+    {
+        "id": "3",
+        "photo": "https://i.ibb.co/PcX4kHh/images-1.jpg",
+        "brand": "Samsung",
+        "price":900,
+        "name": "Galaxy S23 Ultra",
+        "processor": "Snapdragon 8 Gen 2",
+        "info": "High-end flagship with excellent performance and camera features.",
+        "rating": 5
+    },
+    {
+        "id": "4",
+        "photo": "https://i.ibb.co/hBs4cMk/images-4.jpg",
+        "brand": "Samsung",
+        "name": "Galaxy Note 20 Ultra",
+        "processor": "Exynos 990",
+        "price":600,
+        "info": "Features a large display and S Pen functionality.",
+        "rating": 4
+    },
+    {
+        "id": "5",
+        "photo": "https://i.ibb.co/47Xs5mm/redmi.jpg",
+        "brand": "Redmi",
+        "price":400,
+        "name": "Redmi Note 12 Pro",
+        "processor": "Dimensity 1080",
+        "info": "Offers good performance and features at an affordable price.",
+        "rating": 4
+    },
+    {
+        "id": "6",
+        "photo": "https://i.ibb.co/hgKjrsm/Redmi-12.jpg",
+        "brand": "Redmi",
+        "name": "Redmi 12",
+        "price":300,
+        "processor": "Snapdragon 888",
+        "info": "High performance with a focus on gaming and multimedia.",
+        "rating": 5
+    },
+    {
+        "id": "7",
+        "photo": "https://i.ibb.co/VpjYMK0/realme.jpg",
+        "brand": "Realme",
+        "price":200,
+        "name": "Realme GT 2 Pro",
+        "processor": "Snapdragon 8 Gen 1",
+        "info": "Offers high performance and innovative design at a competitive price.",
+        "rating": 4
+    },
+    {
+        "id": "8",
+        "photo": "https://i.ibb.co/PYQYjb9/realme12.jpg",
+        "brand": "Realme",
+        "price":200,
+        "name": "Realme 11 Pro",
+        "processor": "Dimensity 700",
+        "info": "Affordable phone with decent features and performance.",
+        "rating": 5
+    },
+    {
+        "id": "9",
+        "photo": "https://i.ibb.co/ZhbKjRd/infinix-6.jpg",
+        "brand": "Infinix",
+        "name": "Infinix Zero Ultra",
+        "price":180,
+        "processor": "Dimensity 920",
+        "info": "Affordable phone with good specs and fast charging capabilities.",
+        "rating": 5
+    },
+    {
+        "id": "10",
+        "photo": "https://i.ibb.co/19fPz2L/infinix40.jpg",
+        "brand": "Infinix",
+        "price":120,
+        "name": "Infinix Note 12",
+        "processor": "Helio G96",
+        "info": "Offers a large display and good performance for its price range.",
+        "rating": 3
+    },
+    {
+        "id": "11",
+        "photo": "https://i.ibb.co/0K1ysxg/1-nexg-n25-id-364x364.jpg",
+        "brand": "Walton",
+        "name": "Walton Primo RM5",
+        "price":120,
+        "processor": "Helio G70",
+        "info": "Affordable smartphone with basic features and good performance.",
+        "rating": 3
+    },
+    {
+        "id": "12",
+        "photo": "https://i.ibb.co/Wy7LjDn/images-2.jpg",
+        "brand": "Walton",
+        "name": "Walton Primo X4",
+        "price":100,
+        "processor": "Unisoc SC9863A",
+        "info": "Provides a balance between price and essential features.",
+        "rating": 3
+    },
+    {
+        "id": "13",
+        "photo": "https://i.ibb.co/8PPc4RQ/images-6.jpg",
+        "brand": "Apple",
+        "name": "iPhone SE (2022)",
+        "price":1200,
+        "processor": "A15 Bionic",
+        "info": "Compact iPhone with powerful performance and affordable price.",
+        "rating": 5
+    },
+    {
+        "id": "14",
+        "photo": "https://i.ibb.co/hBs4cMk/images-4.jpg",
+        "brand": "Samsung",
+        "name": "Galaxy A54",
+        "price":1100,
+        "processor": "Exynos 1380",
+        "info": "Mid-range phone with a great display and solid performance.",
+        "rating": 4
+    },
+    {
+        "id": "15",
+        "photo": "https://i.ibb.co/47Xs5mm/redmi.jpg",
+        "brand": "Redmi",
+        "name": "Redmi Note 11 Pro+",
+        "processor": "Dimensity 920",
+        "price":500,
+        "info": "Features a high-resolution display and fast charging.",
+        "rating": 4
+    },
+    {
+        "id": "16",
+        "photo": "https://i.ibb.co/dbv0zrr/realmec35.jpg",
+        "brand": "Realme",
+        "name": "Realme X7 Max",
+        "price":700,
+        "processor": "Dimensity 1200",
+        "info": "Offers high performance and a sleek design.",
+        "rating": 4
+    },
+    {
+        "id": "17",
+        "photo": "https://i.ibb.co/DWk329c/infinix40i.jpg",
+        "brand": "Infinix",
+        "name": "Infinix Hot 20",
+        "price":400,
+        "processor": "Helio G85",
+        "info": "Budget-friendly phone with decent features for everyday use.",
+        "rating": 3
+    },
+    {
+        "id": "18",
+        "photo": "https://i.ibb.co/wRFgss5/images-3.jpg",
+        "brand": "Samsung",
+        "name": "Galaxy Z Fold 4",
+        "price":600,
+        "processor": "Snapdragon 8+ Gen 1",
+        "info": "Foldable phone with cutting-edge technology and multitasking features.",
+        "rating": 4
+    },
+    {
+        "id": "19",
+        "photo": "https://i.ibb.co/xLQy09h/r.png",
+        "brand": "Redmi",
+        "name": "Redmi 11A",
+        "price":400,
+        "processor": "Helio G25",
+        "info": "Entry-level smartphone with essential features at a low price.",
+        "rating": 3
+    },
+    {
+        "id": "20",
+        "photo": "https://i.ibb.co/mNvQHDx/Realme-C51.jpg",
+        "brand": "Realme",
+        "name": "Realme C35",
+        "price":160,
+        "processor": "Unisoc T616",
+        "info": "Affordable phone with a large display and good battery life.",
+        "rating": 5
+    }
+]
