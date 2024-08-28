@@ -67,12 +67,12 @@ const router = createBrowserRouter([
       {
         path : "/phones/:id",
         element :<PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader: ()=> fetch('https://phone-store-server-badhons-projects.vercel.app/phones')
+        loader: ()=> fetch('https://phone-store-server-q4tq15q9e-badhons-projects.vercel.app/phones')
       },
       {
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader :({params}) => fetch(`https://phone-store-server-badhons-projects.vercel.app/cart/${params.id}`)
+        loader :({params}) => fetch(`https://phone-store-server-q4tq15q9e-badhons-projects.vercel.app/cart/${params.id}`)
       }
       
     ]

@@ -17,7 +17,7 @@ const Update = () => {
         const photo = form.photo.value;
     
         const newProduct = {name,brand,processor,price,info,rating,photo}
-        fetch(`https://phone-store-server-badhons-projects.vercel.app/cart/${data._id}`, {
+        fetch(`https://phone-store-server-q4tq15q9e-badhons-projects.vercel.app/cart/${data._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
