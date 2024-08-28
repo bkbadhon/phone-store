@@ -8,7 +8,7 @@ const Mobiles = () => {
 
 
   useEffect(() => {
-    fetch("https://phone-store-server-q4tq15q9e-badhons-projects.vercel.app/phones")
+    fetch("https://phone-store-server-zeta.vercel.app/phones")
       .then((res) => res.json())
       .then((data) => {
         setPhones(data);

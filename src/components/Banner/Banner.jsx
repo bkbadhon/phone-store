@@ -2,7 +2,7 @@ import image from "../../../public/iphone15-removebg-preview.png";
 
 const Banner = () => {
   return (
-    <div className="md:flex gap-5 -mt-6 bg-pink-300 py-16 mb-16 items-center  justify-between">
+    <div className="md:flex gap-5 -mt-6  py-16 mb-16 items-center  justify-between">
       <div className=" md:w-1/2">
         <h1 className="text-5xl font-bold" data-aos="fade-right" data-aos-duration="1000">
           Choose{" "}

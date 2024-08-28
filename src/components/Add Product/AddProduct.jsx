@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import useAxios, { AxiosSource } from "../Axios/useAxios";
 
 const AddProduct = () => {
@@ -22,6 +23,12 @@ const AddProduct = () => {
         console.log(newProduct)
         axiosLink.post('/phones', newProduct)
         .then(res=>{
+            Swal.fire({
+                title: 'Success!',
+                text: `${name} Updated Successfully`,
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
             console.log(res)
         })
         .catch(err=>{
