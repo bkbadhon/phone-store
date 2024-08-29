@@ -67,12 +67,10 @@ const router = createBrowserRouter([
       {
         path : "/phones/:id",
         element :<PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader: ()=> fetch('https://phone-store-server-zeta.vercel.app/phones')
       },
       {
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader :({params}) => fetch(`https://phone-store-server-zeta.vercel.app/cart/${params.id}`)
       }
       
     ]

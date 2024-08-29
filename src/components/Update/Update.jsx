@@ -1,8 +1,23 @@
-import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxios, { AxiosSource } from "../Axios/useAxios";
+import { useState } from "react";
 
 const Update = () => {
-    const data = useLoaderData()
+
+    const [data, setData] = useState([])
+
+    const axiosLink = useAxios(AxiosSource)
+
+    axiosLink.get('/cart')
+    .then(res=>{
+        console.log(res.data)
+        setData(res.data)
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+
+
     const handleUpdate = e =>{
         e.preventDefault()
         const form = event.target;
@@ -17,14 +32,8 @@ const Update = () => {
         const photo = form.photo.value;
     
         const newProduct = {name,brand,processor,price,info,rating,photo}
-        fetch(`https://phone-store-server-zeta.vercel.app/cart/${data._id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newProduct)
-        })
-            .then(res => res.json())
+
+        axiosLink.put(`/cart/${data?._id}`, newProduct)       
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {

@@ -1,12 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const AxiosSource = axios.create({
-    baseURL :'https://phone-store-server-zeta.vercel.app',
-    withCredentials:true,
-})
+  baseURL: "http://localhost:3000",
+  withCredentials: true,
+});
 const useAxios = () => {
-        return AxiosSource
-    
+  return AxiosSource;
 };
 
 export default useAxios;

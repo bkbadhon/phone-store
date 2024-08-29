@@ -42,7 +42,7 @@ const CartView = () => {
 
   }
 
-  const handleUpdate = id =>{
+  const handleUpdate = ()=>{
 
   }
   return (

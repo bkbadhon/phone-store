@@ -8,12 +8,15 @@ const Mobiles = () => {
 
 
   useEffect(() => {
-    fetch("https://phone-store-server-zeta.vercel.app/phones")
-      .then((res) => res.json())
-      .then((data) => {
-        setPhones(data);
-      });
-  }, []);
+    axiosLink.get('/phones')
+    .then(res=>{
+      console.log(res)
+      setPhones(res.data)
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+  }, [axiosLink]);
   console.log(phones)
   const searchRef = useRef();
 
