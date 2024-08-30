@@ -6,18 +6,15 @@ const Mobiles = () => {
     const axiosLink = useAxios(AxiosSource)
   const [phones, setPhones] = useState([]);
 
-
   useEffect(() => {
     axiosLink.get('/phones')
     .then(res=>{
-      console.log(res)
       setPhones(res.data)
     })
     .catch(err=>{
       console.log(err)
     })
   }, [axiosLink]);
-  console.log(phones)
   const searchRef = useRef();
 
   const handleSearch = (e) => {

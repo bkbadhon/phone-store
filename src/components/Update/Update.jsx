@@ -1,17 +1,20 @@
 import Swal from "sweetalert2";
 import useAxios, { AxiosSource } from "../Axios/useAxios";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useParams } from "react-router-dom";
 
 const Update = () => {
 
-    const [data, setData] = useState([])
-
+    const {user} = useContext(AuthContext)
+    const [phones, setPhones] = useState([])
+    const {id} =useParams()
     const axiosLink = useAxios(AxiosSource)
 
-    axiosLink.get('/cart')
+    axiosLink.get(`/cart?email=${user.email}`)
     .then(res=>{
-        console.log(res.data)
-        setData(res.data)
+        const findPhone = res.data.find(phone =>phone._id == id)
+        setPhones(findPhone)
     })
     .catch(err=>{
         console.log(err)
@@ -32,8 +35,9 @@ const Update = () => {
         const photo = form.photo.value;
     
         const newProduct = {name,brand,processor,price,info,rating,photo}
+        console.log(newProduct)
 
-        axiosLink.put(`/cart/${data?._id}`, newProduct)       
+        axiosLink.put(`/cart/${phones?._id}`, newProduct)       
             .then(data => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
@@ -50,7 +54,8 @@ const Update = () => {
 
 
     return (
-        <div>
+        
+                <div>
             <div className="bg-[#F4F3F0] p-24">
             <h2 className="text-3xl font-extrabold">Update Product</h2>
             <form onSubmit={handleUpdate}>
@@ -60,7 +65,7 @@ const Update = () => {
                             <span className="label-text">Product Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" defaultValue={data.name} placeholder="Product Name" className="input input-bordered w-full" />
+                            <input type="text" name="name" defaultValue={phones.name} placeholder="Product Name" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -68,7 +73,7 @@ const Update = () => {
                             <span className="label-text">Brand Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="brand" defaultValue={data.brand} placeholder="Brand Name" className="input input-bordered w-full" />
+                            <input type="text" name="brand" defaultValue={phones.brand} placeholder="Brand Name" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
@@ -78,7 +83,7 @@ const Update = () => {
                             <span className="label-text">Processor</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={data.processor} name="processor" placeholder="Processor" className="input input-bordered w-full" />
+                            <input type="text" defaultValue={phones.processor} name="processor" placeholder="Processor" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -86,7 +91,7 @@ const Update = () => {
                             <span className="label-text">Price</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={data.price} name="price" placeholder="price" className="input input-bordered w-full" />
+                            <input type="text" defaultValue={phones.price} name="price" placeholder="price" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
@@ -96,7 +101,7 @@ const Update = () => {
                             <span className="label-text">Info</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="info" defaultValue={data.info} placeholder="details" className="input input-bordered w-full" />
+                            <input type="text" name="info" defaultValue={phones.info} placeholder="details" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -104,7 +109,7 @@ const Update = () => {
                             <span className="label-text">Rating</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={data.rating} name="rating" placeholder="Rating" className="input input-bordered w-full" />
+                            <input type="text" defaultValue={phones.rating} name="rating" placeholder="Rating" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
@@ -114,7 +119,7 @@ const Update = () => {
                             <span className="label-text">Photo URL</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={data.image} name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
+                            <input type="text" defaultValue={phones.image} name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
@@ -123,6 +128,7 @@ const Update = () => {
             </form>
         </div>
         </div>
+         
     );
 };
 

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import Swal from "sweetalert2";
-import { Link,  useLoaderData, useParams } from "react-router-dom";
+import { Link,useParams } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useAxios, { AxiosSource } from "../Axios/useAxios";
 import useCart from "../Hook/useCart";
@@ -10,15 +10,23 @@ import { IoIosStar } from "react-icons/io";
 
 
 const Cart = () => {
+  const axiosLink = useAxios(AxiosSource);
   const [phones, setPhones] = useState([]);
-  const phonesData = useLoaderData();
   const { id } = useParams();
+  console.log(phones)
 
-  useEffect(() => {
-    const findService = phonesData.find((phone) => phone._id == id);
+  useEffect(()=>{
+    axiosLink.get('/phones')
+    .then(res=>{
+      const findService = res.data.find((phone) => phone._id == id);
+      setPhones(findService);
+      console.log(findService)
+    })
+    .catch(err=>{
+      console.log(err)
+    })
 
-    setPhones(findService);
-  }, [id, phonesData]);
+  },[axiosLink, id])
 
   const [quantity, setQuantity] = useState("");
 
@@ -43,7 +51,6 @@ const Cart = () => {
   const totalCostAfterDiscount = totalCostBeforeDiscount - discountAmount;
   // Function to log the current value of the input field
 
-  const axiosLink = useAxios(AxiosSource);
   const [, refetch] = useCart();
   const handleSubmit = () => {
     if (user && user.email) {
