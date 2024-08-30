@@ -35,12 +35,10 @@ const Update = () => {
         const photo = form.photo.value;
     
         const newProduct = {name,brand,processor,price,info,rating,photo}
-        console.log(newProduct)
 
         axiosLink.put(`/cart/${phones?._id}`, newProduct)       
-            .then(data => {
-                console.log(data);
-                if (data.modifiedCount > 0) {
+            .then((res) => {
+                if (res.data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
                         text: `${name} Updated Successfully`,
@@ -48,6 +46,9 @@ const Update = () => {
                         confirmButtonText: 'Cool'
                     })
                 }
+            })
+            .catch(err =>{
+                console.log(err)
             })
     }
 

@@ -7,11 +7,11 @@ const Faq = () => {
         <p>These phones are celebrated for their innovation, performance, <br /> and user satisfaction, making them popular choices in the market.</p>
     </div>
       <div className="md:flex my-5 justify-center items-center gap-12">
-        <div className="w-1/2">
+        <div className="md:w-1/2 p-4">
           <img className="" src={img} alt="" />
         </div>
 
-        <div className="w-1/2 join join-vertical w-full">
+        <div className="md:w-1/2 p-4 join join-vertical w-full">
           <div className="collapse collapse-arrow join-item border-base-300 border">
             <input type="radio" name="my-accordion-4" defaultChecked />
             <div className="collapse-title text-xl font-medium">

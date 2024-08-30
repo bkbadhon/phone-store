@@ -22,7 +22,7 @@ const Footer = () => {
   </nav>
   <form>
     <h6 className="footer-title">Newsletter</h6>
-    <fieldset className="form-control w-80">
+    <fieldset className="form-control md:w-80">
       <label className="label">
         <span className="label-text text-white">Enter your email address</span>
       </label>

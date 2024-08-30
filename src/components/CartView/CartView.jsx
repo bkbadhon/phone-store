@@ -49,17 +49,17 @@ const CartView = () => {
     <div className="my-4">
       <div className="flex justify-around">
         <div>
-          <h2 className="text-center text-3xl font-bold ">
+          <h2 className="text-center md:text-3xl font-bold ">
             Total Items : {cart.length}
           </h2>
         </div>
         <div>
-          <h2 className="text-center text-3xl font-bold ">
+          <h2 className="text-center md:text-3xl font-bold ">
             Total Price : ${totalPrice}
           </h2>
         </div>
         <div>
-          <button className="text-xl btn px-4 bg-orange-600 text-white">
+          <button className="md:text-xl p-1 rounded-xl px-2 md:px-4 bg-orange-600 text-white">
             Pay
           </button>
         </div>
@@ -71,11 +71,11 @@ const CartView = () => {
           {/* head */}
           <thead>
             <tr className="bg-orange-600 text-white">
-              <th className="text-xl">#</th>
-              <th className="text-xl">Image</th>
-              <th className="text-xl">Email</th>
-              <th className="text-xl">Product Price</th>
-              <th className="text-xl"></th>
+              <th className="text-lg md:text-xl">#</th>
+              <th className="text-lg md:text-xl">Image</th>
+              <th className="text-lg md:text-xl">Email</th>
+              <th className="text-lg md:text-xl">Product Price</th>
+              <th className="text-lg md:text-xl"></th>
               <th></th>
             </tr>
           </thead>

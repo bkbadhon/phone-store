@@ -129,7 +129,7 @@ const Cart = () => {
     <div>
       <div className="  my-5 bg-base-100 shadow-xl">
         <figure>
-          <div className="card-title text-2xl font-bold">
+          <div className="card-title px-4 md:text-2xl text-xl font-bold">
             <h2>
               Mobiles / {phones.brand}/ {phones.name}
             </h2>
@@ -137,14 +137,14 @@ const Cart = () => {
           <div className="divider divider-secondary"></div>
 
           <div className="md:flex justify-around">
-            <div data-aos="fade-right" data-aos-duration="2000">
+            <div className="md:w-1/2 w-full" data-aos="fade-right" data-aos-duration="2000">
               <img
-                className="w-1/3"
+                className="md:w-1/3 my-4 w-1/2"
                 src={phones.photo}
                 data-aos="fade-down"
                 data-aos-duration="2000"
               />
-              <div className=" mb-4 w-1/3 text-left">
+              <div className=" mb-4 md:w-1/3 px-8 text-left">
                 <h2
                   className="card-title mb-2 text-2xl font-bold"
                   data-aos="fade-right"
@@ -195,11 +195,11 @@ const Cart = () => {
               </div>
             </div>
             <div
-              className="text-left"
+              className="text-left p-8"
               data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <h2 className="text-3xl mb-6 font-bold">Ordered Price</h2>
+              <h2 className="md:text-3xl text-2xl mb-6 font-bold">Ordered Price</h2>
               <div className="divider divider-secondary"></div>
               <h2 className="text-xl mb-6 font-bold">
                 Price : {totalCostBeforeDiscount} $
@@ -226,7 +226,7 @@ const Cart = () => {
         </figure>
       </div>
 
-      <div className="text-left ml-4">
+      <div className="text-left p-8">
         <h2 className="text-xl mb-4 text-orange-500">Review This Phone</h2>
         <Rating
           emptySymbol={

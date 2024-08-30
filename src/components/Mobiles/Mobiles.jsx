@@ -81,7 +81,7 @@ const Mobiles = () => {
         {phones.map((phone, _id) => (
           <div
             key={_id}
-            className="card w-96 border-2 border-orange-600 my-5 bg-base-100 shadow-xl"
+            className="card w-96 border-2 border-orange-600 my-5 items-center bg-base-100 shadow-xl"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"
@@ -89,8 +89,8 @@ const Mobiles = () => {
             <figure>
               <img className="w-[200px] h-[200px]" src={phone.photo} data-aos="fade-down" data-aos-duration="2000"/>
             </figure>
-            <div className="card-body" data-aos="fade-left" data-aos-duration="2000">
-              <h2 className="card-title text-xl">
+            <div className="card-body text-center" data-aos="fade-left" data-aos-duration="2000">
+              <h2 className="card-title flex flex-row justify-around text-xl">
                 {phone.name}
                 <div className="badge badge-secondary">{phone.brand}</div>
               </h2>
@@ -105,7 +105,7 @@ const Mobiles = () => {
                   </button>
               </Link> */}
                 <Link to={`/phones/${phone._id}`}>
-                <button className="mx-auto bg-orange-500 p-2 rounded-lg text-white" data-aos="zoom-in" data-aos-duration="2000">
+                <button className="mx-auto bg-orange-500 px-4 p-2 rounded-lg text-white" data-aos="zoom-in" data-aos-duration="2000">
                   View Details
                 </button>
 
